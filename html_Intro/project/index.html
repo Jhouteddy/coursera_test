@@ -13,12 +13,28 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+
+        #headerTitle {
+            color: red;
+        }
+
+        .blueColor {
+            color: blue;
+        }
+
+        p.blueColor {
+            font-weight: bold;
+        }
+
+        .titleCenter {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>My ZOO</h1>
+        <h1 id="headerTitle">My ZOO</h1>
     </header>
     <nav>
         <ul>
@@ -45,13 +61,13 @@
     </section>
 
     <artcle>
-        <h3>ZOO description1</h3>
+        <h3 class="blueColor titleCenter">ZOO description1</h3>
         <p>hello hello hello hello hello hello</p>
     </artcle>
     <hr />
     <artcle>
         <h3>ZOO description2</h3>
-        <p>hello hello hello hello hello hello</p>
+        <p class="blueColor">hello hello hello hello hello hello</p>
     </artcle>
 
 
