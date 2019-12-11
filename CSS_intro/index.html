@@ -22,9 +22,13 @@
 
         h1 {
             background-color: rgba(75, 223, 148, 0.5);
+            text-shadow: 3px 5px white;
         }
 
         p {
+            max-width: 200px;
+            text-align: justify;
+            line-height:1.2;
             background-color: MediumSeaGreen;
         }
 
@@ -54,6 +58,13 @@
             border-radius: 10px;
             margin-top: 60px;
         }
+
+        li{
+            display: block;
+        }
+        .align{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -66,9 +77,11 @@
             That is a text1
         </section>
         <section class=myBorder2>
-            That is a text2
+            <p class="align">That is a text2</p>
         </section>
-        <a href="https://www.iana.org/domains/example">More information...</a>
+        <li><a href="#">More information...1</a></li>
+        <li><a href="#">More information...2</a></li>
+        <li><a href="#">More information...3</a></li>
     </div>
 </body>
 
