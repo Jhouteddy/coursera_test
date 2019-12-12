@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -24,13 +24,13 @@
             background-color: rgba(75, 223, 148, 0.5);
             text-shadow: 3px 5px white;
             letter-spacing: 5px;
-            word-spacing:10px;
+            word-spacing: 10px;
         }
 
         p {
             max-width: 200px;
             text-align: justify;
-            line-height:1.2;
+            line-height: 1.2;
             background-color: MediumSeaGreen;
         }
 
@@ -61,19 +61,101 @@
             margin-top: 60px;
         }
 
-        li{
+        li {
             display: block;
         }
-        .align{
+
+        .align {
             text-align: center;
         }
 
-        a{
+        a {
             text-decoration: none;
         }
 
-        .decoration{
+        .decoration {
             text-decoration: line-through;
+        }
+
+        .redcolor {
+            background-color: red;
+        }
+
+        .myPostion {
+            position: sticky;
+            top: 0px;
+            left: 8px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            float: left;
+
+            padding: 5px;
+            border: 5px solid black;
+            margin: 5px;
+            box-sizing: border-box;
+
+            transition: width 2s ease-in 1s, height 2s ease-in 1s, background-color 2s ease-in 1s;
+            /*transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;*/
+        }
+
+        .box1:hover {
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+        }
+
+        @keyframes myAnimation {
+            /*from {width: 500px;}
+            to {width: 200px;}*/
+            0%{
+                width: 200px;
+                background-color:orange;
+            }
+            50%{
+                width: 500px;
+                background-color: red;
+            }
+            100%{
+                width: 100px;
+                background-color: green;
+            }
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* margin: auto;*/
+            overflow: auto;
+            float: left;
+            clear: left;
+            animation-name: myAnimation;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+        }
+
+        .img-container {
+            width: 33.3%;
+            float: left;
+            padding: 5px;
+            box-sizing: border-box;
+
+            height: 100px;
+            overflow: scroll;
+
+        }
+
+        .clearfix {
+            clear: both;
         }
     </style>
 </head>
@@ -83,12 +165,31 @@
         <h1>Example Domain Test</h1>
         <p>This domain is for use in illustrative examples in documents. You may use this
             domain in literature without prior coordination or asking for permission.</p>
-        <section class=myBorder1>
+        <section class="myBorder1 redcolor myPostion">
             That is a text1
         </section>
         <section class="myBorder2 decoration">
             <p class="align">That is a text2</p>
         </section>
+        <div class="box1">
+            <h2>Title1</h2>
+        </div>
+        <div class="box2">
+            <h2>Title2</h2>
+        </div>
+
+        <div class="clearfix">
+            <div class="img-container">
+                <img src="test.jpg" alt="1 img" style="width:100%;" />
+            </div>
+            <div class="img-container">
+                <img src="test.jpg" alt="2 img" style="width:100%;" />
+            </div>
+            <div class="img-container">
+                <img src="test.jpg" alt="3 img" style="width:100%;" />
+            </div>
+        </div>
+        <div style="padding-bottom:2000px"></div>
         <li><a href="#">More information...1</a></li>
         <li><a href="#">More information...2</a></li>
         <li><a href="#">More information...3</a></li>
