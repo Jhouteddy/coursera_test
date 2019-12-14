@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+
+    <title>My eBay</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        
+        body {
+            margin: 0;
+        }
+
+        header {
+            box-shadow: 0 3px 5px #cccccc;
+            padding: 9px 0;
+
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .navbar {
+            list-style-type: none;
+            font-size: 12px;
+            margin: 0;
+            padding:0;
+        }
+
+        li.navItem {
+            display: inline;
+            border-right: 1px solid #777777;
+        }
+
+        li.navItem a {
+            padding: 0 9px;
+            color: #555555;
+        }
+
+        li.navItem a:link {
+
+            text-decoration: none;
+        }
+
+        li.navItem a:hover {
+
+            text-decoration: underline;
+            color: #0654BA;
+        }
+
+        #singin-style a:link {
+            color: #0654BA !important;
+            padding: 0;
+        }
+
+        #singin-style a:link:last-child {
+            padding-right: 9px;
+        }
+
+        .fliat-right {
+            float: right;
+        }
+
+        .no-border {
+            border-right: none !important;
+        }
+
+        #alert {
+            margin-top: -5px;
+            padding: 0 15px 0 25px;
+        }
+
+        #cart {
+            margin-top: -5px;
+            padding: 0 15px 0 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header-->
+    <header>
+        <div class="container">
+            <ul class="navbar">
+                <li id="singin-style" class="navItem">Hi <a href="#">Sing in</a> or <a href="#">register</a></li>
+                <li class="navItem"><a href="#">Daliy Deals</a></li>
+                <li class="navItem"><a href="#">Sell</a></li>
+                <li class="navItem no-border"><a href="#">Help & Contact</a></li>
+
+                <li id="cart" class="navItem fliat-right no-border"><img src="cart.png" alt="cart" title="your cart"
+                        width="20px" /></li>
+                <li id="alert" class="navItem fliat-right no-border"><img src="alert.png" alt="alert" width="20px" />
+                </li>
+                <li class="navItem fliat-right no-border"><a href="#">My eBay</a></li>
+            </ul>
+        </div>
+    </header>
+
+</body>
+
+</html>
