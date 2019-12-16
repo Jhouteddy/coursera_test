@@ -223,6 +223,58 @@
             text-decoration: none !important;
             color: #555 !important;
         }
+
+        /*<!--Advertisment-->*/
+
+        #adSection {
+            height: 402px;
+            padding: 32px 0;
+        }
+
+        #column1 {
+            float: left;
+            height: 402px;
+        }
+
+        #column2 {
+            position: relative;
+            float: left;
+            height: 402.8px;
+            width: 324px;
+        }
+
+        .add-border {
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        #ad2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #ad3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        /*<!--Product section-->*/
+
+        #productSection {
+            width: 100%;
+            height: 647px;
+            padding-bottom: 75px;
+            overflow: hidden;
+        }
+
+        .hero-heading {
+            height: 45px;
+            border-bottom: 1px solid #ddd;
+            font-weight: 400;
+            color: #555;
+        }
     </style>
 </head>
 
@@ -236,9 +288,10 @@
                 <li class="navItem"><a href="#">Sell</a></li>
                 <li class="navItem no-border"><a href="#">Help & Contact</a></li>
 
-                <li id="cart" class="navItem fliat-right no-border"><img src="cart.png" alt="cart" title="your cart"
+                <li id="cart" class="navItem fliat-right no-border"><img src="img/cart.png" alt="cart" title="your cart"
                         width="20px" /></li>
-                <li id="alert" class="navItem fliat-right no-border"><img src="alert.png" alt="alert" width="20px" />
+                <li id="alert" class="navItem fliat-right no-border"><img src="img/alert.png" alt="alert"
+                        width="20px" />
                 </li>
                 <li class="navItem fliat-right no-border"><a href="#">My eBay</a></li>
             </ul>
@@ -248,10 +301,10 @@
     <!--Search Form-->
     <div id="search-bar" class="clearfix setBGcolor">
         <div class="container">
-            <img id="brand" src="brand.png" alt="eBay" height="55px" />
+            <img id="brand" src="img/brand.png" alt="eBay" height="55px" />
             <button id="shopping-button" type="button">
                 <p>Shop by category</p>
-                <img id="arrow" src="arrow.png" alt="arrow" width="20px">
+                <img id="arrow" src="img/arrow.png" alt="arrow" width="20px">
             </button>
             <form id="search-from">
                 <table>
@@ -306,6 +359,53 @@
 
         </div>
     </nav>
+    <!--Advertisment-->
+    <section id="adSection" class="setBGcolor clearfix">
+        <div class="container">
+            <div id="column1">
+                <div>
+                    <img id="ad1" class="add-border" src="img/ad1.png" alt="ad1" width="876px" />
+                </div>
+            </div>
+
+            <div id="column2">
+                <div>
+                    <img id="ad2" class="add-border" src="img/ad2.png" alt="ad2" width="300px" />
+                </div>
+                <div>
+                    <img id="ad3" class="add-border" src="img/ad3.png" alt="ad3" width="300px" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Product section-->
+    <section id="productSection" class="setBGcolor clearfix">
+        <div class="container">
+            <h2 class="hero-heading">Today's Featured Collections</h2>
+            <div id="show-product">
+                <div class="product-section">
+                    <div class="product-photo">
+                        <div class="photo-column1">
+                            <img id="photo1" src="img/product1.jpg" alt="product1">
+                        </div>
+                        <div class="photo-column2">
+                            <div class="thumb">
+                                <img class="thumbnail" src="img/thumbnail1_1.jpg" alt="thumbnail1_1">
+                            </div>
+                            <div class="thumb">
+                                <img class="thumbnail" src="img/thumbnail1_2.jpg" alt="thumbnail1_2">
+                            </div>
+                            <div class="thumb">
+                                <img class="thumbnail" src="img/thumbnail1_3.png" alt="thumbnail1_3">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
