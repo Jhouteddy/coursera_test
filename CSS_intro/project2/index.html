@@ -2,280 +2,11 @@
 <html lang="zh-Hant-TW">
 
 <head>
-
     <title>My eBay</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-
-        /*<!-- Header-->*/
-        header {
-            box-shadow: 0 3px 5px #cccccc;
-            padding: 9px 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .container {
-            width: 1200px;
-            margin: auto;
-        }
-
-        .navbar {
-            list-style-type: none;
-            font-size: 12px;
-            margin: 0;
-            padding: 0;
-        }
-
-        li.navItem {
-            display: inline;
-            border-right: 1px solid #777777;
-        }
-
-        li.navItem a {
-            padding: 0 9px;
-            color: #555555;
-        }
-
-        li.navItem a:link {
-
-            text-decoration: none;
-        }
-
-        li.navItem a:hover {
-
-            text-decoration: underline;
-            color: #0654BA;
-        }
-
-        #singin-style a:link {
-            color: #0654BA !important;
-            padding: 0;
-        }
-
-        #singin-style a:link:last-child {
-            padding-right: 9px;
-        }
-
-        .fliat-right {
-            float: right;
-        }
-
-        .no-border {
-            border-right: none !important;
-        }
-
-        #alert {
-            margin-top: -5px;
-            padding: 0 15px 0 25px;
-        }
-
-        #cart {
-            margin-top: -5px;
-            padding: 0 15px 0 25px;
-        }
-
-        /*<!-- Search From-->*/
-        #search-bar {
-            width: 100%;
-            height: 65px;
-            overflow: hidden;
-        }
-
-        .setBGcolor {
-            background-color: #F9F9F9;
-        }
-
-        .clearfix {
-            clear: both;
-        }
-
-        #brand {
-            float: left;
-        }
-
-        #shopping-button {
-            float: left;
-            width: 70px;
-            font-size: 14px;
-            color: #555555;
-            border: none;
-            background-color: #F9F9F9;
-            margin-right: 15px;
-        }
-
-        #arrow {
-            position: relative;
-            bottom: 35px;
-            left: 40px;
-        }
-
-        #search-from {
-            float: left;
-            margin-top: 10px;
-            margin-left: 15px;
-        }
-
-        #search-field {
-            border-radius: 3px 0 0 3px;
-            width: 600px;
-            height: 40px;
-            box-sizing: border-box;
-        }
-
-        .text-field {
-            font-size: 16px;
-            color: #767676;
-            padding: 10px 0 9px 8px;
-            border: 1px solid #ddd;
-        }
-
-        #category-textfield {
-            border-radius: 0 3px 3px 0;
-            padding: 11px 10px;
-            height: 40px;
-            width: 180px;
-            background-color: #fff;
-            box-sizing: border-box;
-            margin-left: -4px;
-        }
-
-        .options {
-            border: none;
-            font-size: 12px;
-            width: 100%;
-            background-color: transparent;
-        }
-
-        .btn-primary {
-            font-size: 12px;
-            height: 40px;
-            font-weight: 500;
-            border-radius: 3px;
-            border: 0;
-            color: #fff;
-            padding: 8px 19px 9px 19px;
-            background: linear-gradient(to bottom, #0079bc, #00509d);
-        }
-
-        .btn-primary:hover {
-            background: #00509d;
-        }
-
-        #advanced-button {
-            color: #555555;
-            text-decoration: none;
-            font-size: 11px;
-            margin-left: 10px;
-        }
-
-        #advanced-button:hover {
-            color: #065dBA;
-        }
-
-
-        /*<!--navigation Bar-->*/
-        nav {
-            width: 100%;
-            height: 35px;
-            padding-top: 12px;
-        }
-
-        .tb-border {
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-
-        }
-
-        #navigation-bar {
-            width: 100%;
-            height: 35px;
-            padding: 10px 0 11px 0;
-            box-sizing: border-box;
-        }
-
-        .li-space {
-            float: left;
-            padding: 0 2%;
-        }
-
-        .divider {
-            float: left;
-            width: 1px;
-            height: 24px;
-            background: #ddd;
-            margin: -5px 20px 0 20px;
-        }
-
-        .active a {
-            font-weight: bold;
-            border-bottom: 2px solid #555;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            padding-bottom: 9px !important;
-        }
-
-        .active a:hover {
-            text-decoration: none !important;
-            color: #555 !important;
-        }
-
-        /*<!--Advertisment-->*/
-
-        #adSection {
-            height: 402px;
-            padding: 32px 0;
-        }
-
-        #column1 {
-            float: left;
-            height: 402px;
-        }
-
-        #column2 {
-            position: relative;
-            float: left;
-            height: 402.8px;
-            width: 324px;
-        }
-
-        .add-border {
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        #ad2 {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        #ad3 {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
-
-        /*<!--Product section-->*/
-
-        #productSection {
-            width: 100%;
-            height: 647px;
-            padding-bottom: 75px;
-            overflow: hidden;
-        }
-
-        .hero-heading {
-            height: 45px;
-            border-bottom: 1px solid #ddd;
-            font-weight: 400;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--style type="text/css"-->
 </head>
 
 <body>
@@ -384,6 +115,7 @@
         <div class="container">
             <h2 class="hero-heading">Today's Featured Collections</h2>
             <div id="show-product">
+                <!--product 1 start-->
                 <div class="product-section">
                     <div class="product-photo">
                         <div class="photo-column1">
@@ -391,7 +123,7 @@
                         </div>
                         <div class="photo-column2">
                             <div class="thumb">
-                                <img class="thumbnail" src="img/thumbnail1_1.jpg" alt="thumbnail1_1">
+                                <img class="thumbnail" id="thumbnail-fix" src="img/thumbnail1_1.jpg" alt="thumbnail1_1">
                             </div>
                             <div class="thumb">
                                 <img class="thumbnail" src="img/thumbnail1_2.jpg" alt="thumbnail1_2">
@@ -402,10 +134,133 @@
 
                         </div>
                     </div>
+                    <!--Artice-->
+                    <article>
+                        <div class="left-col">
+                            <h3 class="title">In a Flash</h3>
+                            <div class="description-container">
+                                <p class="product-details">
+                                    Make new memories with Make new memories Make new memories Make new memories with.
+                                    <a href="#" title="read more">
+                                        <span class="read-more"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-col right-col-text">
+                            <ul class="right-col-container">
+                                <li class="right-col-item">15 items</li>
+                                <li class="right-col-item">by ebaytecheditor</li class="right-col-item">
+                                <li class="right-col-item"><a class="active-link" href="#">shop</a></li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
+                <!--product 1 end-->
+
+                <!--product 2 start-->
+                <div class="product-section right-section">
+                    <div class="product-photo">
+                        <div class="photo-column1">
+                            <img id="photo-adjust" src="img/product2.jpg" alt="product2">
+                        </div>
+                        <div class="photo-column2">
+                            <div class="thumb">
+                                <img class="thumbnail" id="thumbnail-adjust" src="img/thumbnail2_1.jpg"
+                                    alt="thumbnail2_1">
+                            </div>
+                            <div class="thumb">
+                                <img class="thumbnail" src="img/thumbnail2_2.jpg" alt="thumbnail2_2">
+                            </div>
+                            <div class="thumb">
+                                <img class="thumbnail" src="img/thumbnail2_3.jpg" alt="thumbnail2_3">
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Artice-->
+                    <article>
+                        <div class="left-col">
+                            <h3 class="title">In a Flash</h3>
+                            <div class="description-container">
+                                <p class="product-details">
+                                    Make new memories with Make new memories Make new memories Make new memories with.
+                                    <a href="#" title="read more">
+                                        <span class="read-more"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-col right-col-text">
+                            <ul class="right-col-container">
+                                <li class="right-col-item">15 items</li>
+                                <li class="right-col-item">by ebaytecheditor</li class="right-col-item">
+                                <li class="right-col-item"><a class="active-link" href="#">shop</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <!--product 2 end-->
             </div>
         </div>
     </section>
+    <!--Daily Deals-->
+    <section id="daily-deals" class="clearfix setBGColor">
+        <div class="container">
+            <h2 class="hero-heading">Daily Deals</h2>
+            <div class="box">
+                <div class="box-subcontent">
+                    <img class="sale" src="img/1.jpg" alt="sale-pic">
+                    <a href="#" class="details">Dyson SV07 V6 HEPA CORDLESS vacum</a>
+                    <h4 class="price">HKD 431.63</h4>
+                </div>
+                <div class="box-subcontent">
+                    <img class="sale" src="img/2.jpg" alt="sale-pic">
+                    <a href="#" class="details">Dyson SV07 V6 HEPA CORDLESS vacum</a>
+                    <h4 class="price">HKD 431.63</h4>
+                </div>
+                <div class="box-subcontent">
+                    <img class="sale" src="img/3.jpg" alt="sale-pic">
+                    <a href="#" class="details">Dyson SV07 V6 HEPA CORDLESS vacum</a>
+                    <h4 class="price">HKD 431.63</h4>
+                </div>
+                <div class="box-subcontent">
+                    <img class="sale" src="img/4.jpg" alt="sale-pic">
+                    <a href="#" class="details">Dyson SV07 V6 HEPA CORDLESS vacum</a>
+                    <h4 class="price">HKD 431.63</h4>
+                </div>
+                <div class="box-subcontent">
+                    <img class="sale" src="img/5.jpg" alt="sale-pic">
+                    <a href="#" class="details">Dyson SV07 V6 HEPA CORDLESS vacum</a>
+                    <h4 class="price">HKD 431.63</h4>
+                </div>
+                <!--pAGINATION-->
+                <div class="pagination clearfix">
+                    <div class="pagination-content">
+                        <a href="#">(</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="active">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">)</a>
+                    </div>
+                </div>
+            </div>
+            <!--Collections-->
+            <div id="collections">
+                <p>Get inspired! Explore all of our <a href="#">Trending Collections</a></p>
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div style="float:right">
+                <p>&copy: 2018 版權 Teddy JHOU</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
