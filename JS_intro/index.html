@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn JS</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <!-- <button onclick="alert('Hello!')"> touch me! </button> -->
+    <button id="myButton" onclick="alert('Hello!')"> touch me! </button>
+    <p id="text">獲取一段文字</p>
+
+    <script type="text/javascript">
+        //alert(document.getElementById('text').innerHTML);
+        //document.getElementById('text').innerHTML="修改後的文字";
+        document.getElementById("myButton").onclick = function () {
+            alert("He  llo");
+        }
+    </script>
+</body>
+
+</html>
