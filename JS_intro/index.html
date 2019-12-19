@@ -39,6 +39,15 @@
     <button id="myButton3"> touch me! </button>
     <p id="text3">一段文字而已</p>
 
+    <button id="myButton4"> touch me! </button>
+    <p id="text4">一段文字而已</p>
+
+    <br><br>
+
+    <p>今日天氣如何</p>
+    <input id="myInput1" type="text" value="my value" />
+    <button id="myButton5"> 提交 </button>
+
     <script type="text/javascript">
         //alert(document.getElementById('text').innerHTML);
         //document.getElementById('text').innerHTML="修改後的文字";
@@ -65,6 +74,27 @@
             var myVariable1 = document.getElementById("myInput").value;
             document.getElementById('text3').innerHTML = myVariable1;
         }
+
+        var myArray = ["pizza", "chocalate"];
+        myArray.push("apple");
+        console.log("push = ", myArray);
+        myArray.splice(1, 1);
+        console.log("delete chcocalate,", myArray);
+        document.getElementById('myButton4').onclick = function () {
+            document.getElementById('text4').innerHTML = myArray[1];
+        }
+
+
+        document.getElementById('myButton5').onclick = function () {
+            if (document.getElementById('myInput1') == '下雨') {
+                alert("今天下雨");
+            } else {
+                alert("今天沒下雨");
+            }
+
+
+        }
+
     </script>
 </body>
 

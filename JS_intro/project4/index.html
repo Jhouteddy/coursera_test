@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn JS</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+
+    <p>請猜猜一個0到10之間的整數</p>
+    <input id="myInput" type="text" value="my value" />
+    <button id="myButton"> 提交 </button>
+
+    <script type="text/javascript">
+        document.getElementById('myButton').onclick = function () {
+            var x = Math.random();
+            x = x * 11;
+            x = Math.floor(x);
+            if (document.getElementById('myInput').value == x) {
+                alert("猜對了");
+            } else {
+                alert("猜錯了,數字是"+x);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
