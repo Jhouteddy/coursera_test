@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn Jquery</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: #A7568B;
+            border-radius: 50%;
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: #E86D5E;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <button id="b1">消退</button>
+    <button id="b2">顯示</button>
+    <p>這是一段文字</p>
+    <!--iframe src="http://ken-cens.com/" width="800" height="600"></!--iframe-->
+    <script type="text/javascript">
+        //原本JS用法
+        //document.getElementById('id')
+
+        //jQuery用法
+        $("#circle").click(function () {
+            //alert("我們點擊了圓形");
+            //alert($("p").html());
+            //$("#circle").css("width", "400px");
+            //$(".square").css("display", "none");
+            $(this).animate({ width: "400px" }, 2000);
+        });
+
+        $("#circle").hover(function () {
+            // $("p").html("這是一段修改後的文字");
+            //alert($("iframe").attr("src"));
+        });
+
+        $(".square").click(function () {
+            alert("我們點擊了正方形");
+        });
+
+        /*$("div").click(function () {
+            //alert("我們點擊了圓形");
+            //alert($("p").html());
+            $(this).css("width","400px")
+        });*/
+
+        $("#b1").click(function () {
+            $("#circle").fadeOut(3000, function () {
+                alert("消退完成");
+            });
+        });
+
+        $("#b2").click(function () {
+            $("#circle").fadeIn();
+        });
+    </script>
+
+</body>
+
+</html>

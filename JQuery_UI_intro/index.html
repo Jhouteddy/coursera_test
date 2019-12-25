@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn Jquery</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: #E86D5E;
+            margin-top: 10px;
+        }
+
+        #resizable {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="accordion">
+        <h3>Title</h3>
+        <p>That is apple. That is apple. That is apple. That is apple. That is apple. That is apple.</p>
+        <h3>Title</h3>
+        <p>That is apple. That is apple. That is apple. That is apple. That is apple. That is apple.</p>
+        <h3>Title</h3>
+        <p>That is apple. That is apple. That is apple. That is apple. That is apple. That is apple.</p>
+        <h3>Title</h3>
+        <p>That is apple. That is apple. That is apple. That is apple. That is apple. That is apple.</p>
+        <h3>Title</h3>
+        <p>That is apple. That is apple. That is apple. That is apple. That is apple. That is apple.</p>
+    </div>
+
+    <div class="ui-widget">
+        <label for="tags">請輸入您的內容:</label>
+        <input type="text" id="tags">
+    </div>
+
+    <div id="square"></div>
+    <div id="resizable"></div>
+
+    <script type="text/javascript">
+
+$(function(){
+    $("#accordion").accordion();
+});
+        $(function () {
+            var availableTags = ["apple", "abb"]
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+
+        $("#square").draggable();
+        //$("#resizable").resizable();
+
+        $("#resizable").droppable({
+            drop: function (event, ui) {
+                //alert("已經拖入正方形");
+                $(this).addClass("ui-state-highlight");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
